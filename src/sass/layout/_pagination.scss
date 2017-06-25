@@ -1,8 +1,5 @@
-@import "../utils/_mixins.scss";
-
 .pagination{
   width: 100%;
-  // background-color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -14,7 +11,7 @@
   padding: 0 10px;
 
   &.current{
-    // color: $brand;
+    
   }
 }
 
@@ -23,8 +20,6 @@
 .page-numbers{
   color: #969696;
   font-size: 22px;
-  font-family: $sansSerif2;
-  font-weight: 700;
 }
 a.page-numbers{
 

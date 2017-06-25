@@ -1,5 +1,5 @@
-@import "../utils/_mixins.scss";
-
+// markup for plugin Breadcrumb NavXT
+// https://wordpress.org/plugins/breadcrumb-navxt/
 .breadcrumbs {
   background-color: #fff;
   padding: 15px 0 25px;
@@ -15,27 +15,25 @@
   a {
     font-size: 1rem;
     display: inline-block;
-    vert-align: top;
+    vertical-align: top;
   }
 
   > span {
     margin-top: 15px;
   }
 
-  a {
-    color: $brand; /////////////////////////   Всі ссилки
-    border-bottom: 1px dotted currentColor;
-
+  a { /////////////////////////   All links
+  
     &:hover {
-      color: $brown;
+      
     }
   }
 
-  > span:last-child { /////////////////////    Останній елемент
-    color: $brand;
+  > span:last-child { /////////////////////    Last element
+  
   }
 
-  > span:not(:last-child){ ////////////////   Символ між елементами
+  > span:not(:last-child){ ////////////////   Symbol between elements
     &::after {
       margin-left: 5px;
       margin-right: 5px;

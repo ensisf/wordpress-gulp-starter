@@ -33,7 +33,6 @@
   "dependencies": {
     "magnific-popup": "^1.1.0",
     "normalize.css": "^7.0.0",
-    "slick-carousel": "^1.6.0",
-    "vanilla-lazyload": "^7.2.1"
+    "slick-carousel": "^1.6.0"
   }
 }

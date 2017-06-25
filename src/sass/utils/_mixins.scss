@@ -1,5 +1,3 @@
-@import "_vars.scss";
-@import "../components/_sprite";
 //==========list-reset==========//
 %list-reset{
 	padding: 0;
@@ -64,15 +62,6 @@
   }
 }
 
-//==========ABSILUTE PSEUDO==========//
-@mixin absolut_pseudo {
-  position: relative;
-  &:before,&:after {
-    content: "";
-    position: absolute;
-  }
-}
-
 //==========COVER LAYER==========//
 @mixin coverlayer {
   position: absolute;
@@ -113,16 +102,6 @@
     @content;
   }
 }
-
-//==========HYPHENATION WORDS==========//
-
-@mixin hyphens{
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-
-}
-
 
 //==========addition mixins==========//
 @mixin large_bg{

@@ -1,5 +1,3 @@
-@import "../utils/_mixins.scss";
-
 .btn{
   position: relative;
   display: inline-block;
@@ -17,20 +15,7 @@
   line-height: 1;
 
   &--default{
-    background-color: $accent;
-    font-family: $sans-serif2;
-    font-weight: 700;
-    padding: inherit;
-    font-size: 18px;
-    color: #8e6b27;
-    padding: 9px 19px;
-    border-radius: 36px;
-    transition: 0.3s;
-
-    @include state{
-      background-color: darken($accent, 10%);
-      color: $font-color;
-    }
+    
   }
 
   &--menu{
