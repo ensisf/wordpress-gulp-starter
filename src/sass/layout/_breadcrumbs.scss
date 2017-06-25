@@ -1,0 +1,45 @@
+@import "../utils/_mixins.scss";
+
+.breadcrumbs {
+  background-color: #fff;
+  padding: 15px 0 25px;
+
+  .container {
+    display: block;
+  }
+}
+
+.breadcrumbs__list{
+
+  span,
+  a {
+    font-size: 1rem;
+    display: inline-block;
+    vert-align: top;
+  }
+
+  > span {
+    margin-top: 15px;
+  }
+
+  a {
+    color: $brand; /////////////////////////   Всі ссилки
+    border-bottom: 1px dotted currentColor;
+
+    &:hover {
+      color: $brown;
+    }
+  }
+
+  > span:last-child { /////////////////////    Останній елемент
+    color: $brand;
+  }
+
+  > span:not(:last-child){ ////////////////   Символ між елементами
+    &::after {
+      margin-left: 5px;
+      margin-right: 5px;
+      content: "/";
+    }
+  }
+}

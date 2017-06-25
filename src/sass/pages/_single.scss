@@ -1,0 +1,43 @@
+.entry{
+
+}
+
+.entry__content{
+  @include cf;
+  padding: 0 10px;
+}
+
+.entry__figure{
+  @include min(992px){
+    float: left;
+    max-width: 470px;
+    margin: 0 47px 20px 0;
+  }
+}
+
+.entry__image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entry__text{
+
+}
+
+.entry__title{
+
+}
+
+.entry__info{
+
+}
+
+.entry__date{
+
+}
+
+.figure-content {
+    width: 100%;
+    vertical-align: bottom;
+}

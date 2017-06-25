@@ -1,0 +1,44 @@
+const plugins = require('gulp-load-plugins')({
+        pattern: ['gulp-*', 'browser-sync', 'gulp.*', '@*/gulp{-,.}*']
+      });
+      
+const config = {
+  path: {
+    build: {
+      html: '',
+      js: 'js/',
+      css: '',
+      img: 'img/',
+      fonts: 'fonts/'
+    },
+    src: {
+      html: 'src/*.html',
+      js: 'src/js/main.js',
+      style: 'src/sass/style.scss',
+      img: 'src/img/**/*.*',
+      fonts: 'src/fonts/**/*.*',
+      spriteImg: 'src/img/images/',
+      spriteSass: 'src/sass/components/',
+      spriteIcons: 'src/design/icones/**/*.png'
+    },
+    watch: {
+      html: 'src/**/*.html',
+      js: 'src/js/**/*.js',
+      style: 'src/sass/**/*.scss',
+      img: 'src/img/**/*.*',
+      fonts: 'src/fonts/**/*.*'
+    }
+  },
+  isDev: !process.env.NODE_ENV || process.env.NODE_ENV === 'production',
+  onError: function (err) {
+    plugins.notify.onError({
+      title: "Gulp",
+      subtitle: "Failure!",
+      message: "Error: <%= error %> ",
+      sound: "Beep"
+    })(err);
+    this.emit('end');
+  }
+};
+
+module.exports = config;

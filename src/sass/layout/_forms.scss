@@ -1,0 +1,92 @@
+@import "../utils/_mixins.scss";
+
+input,
+select,
+button,
+textarea {
+    // border: none;
+    background: none;
+    font: inherit;
+    color: inherit;
+
+    &:focus{
+      outline-color: $theme-color;
+    }
+
+    .modal-form &{
+      background-color: #fff;
+    }
+}
+label {
+    cursor: pointer;
+    user-select: none;
+}
+//only vertical resize for textareas
+textarea {
+    resize: vertical;
+}
+//styles for disabled elements
+[disabled],
+button[disabled],
+html input[disabled] {
+    cursor: not-allowed;
+    opacity: 0.8;
+    user-select: none;
+}
+
+.form-control{
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  outline: none;
+  font-size: 15px;
+  color: $font-color;
+  line-height: 1.4;
+  padding: (41-(1.4*15))/2+px 16px;
+  // padding: 0 12px;
+  margin-bottom: $form-control-bottm-margin;
+
+  @include placeholder{
+    color: inherit;
+  };
+  @include placeholder--focus;
+
+  &--bordered{
+    border: $form-border;
+  }
+}
+
+.form-row{
+
+  span{
+    display: block;
+  }
+}
+
+/////////////////////////////////////////cf7
+.wpcf7-not-valid{// not valid field
+  background-color: $error-light;
+}
+.wpcf7-not-valid-tip{ // not valid tip
+  display: block;
+  margin-bottom: 10px;
+  color: $error;
+}
+.wpcf7-form .ajax-loader { // load icon
+  background-image: url(img/images/ripple.svg)!important;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 42px!important;
+  height: 42px!important;
+  margin-right: auto !important;
+}
+
+.wpcf7-response-output{
+  margin-top: 10px;
+}
+
+.wpcf7-form-control-wrap{
+  width: 100%;
+}

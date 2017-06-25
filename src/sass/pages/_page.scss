@@ -1,0 +1,24 @@
+.page{
+  padding: 55px 0 20px;
+}
+
+.helpful-know{
+  @include min(1025px){
+    margin-bottom: 65px;
+  }
+}
+
+.content-block{
+  line-height: (21/15);
+
+  p{    
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  ul{
+    padding: 0;
+    @extend .list-dotted;
+  }
+}

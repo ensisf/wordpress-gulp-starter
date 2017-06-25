@@ -1,0 +1,45 @@
+@import "../utils/_mixins.scss";
+
+.pagination{
+  width: 100%;
+  // background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.page-numbers{
+  padding: 0 10px;
+
+  &.current{
+    // color: $brand;
+  }
+}
+
+
+
+.page-numbers{
+  color: #969696;
+  font-size: 22px;
+  font-family: $sansSerif2;
+  font-weight: 700;
+}
+a.page-numbers{
+
+  &.current,
+  &:hover{
+    color: #2a2a2a;
+  }
+}
+
+.pag-arrow-next,
+.pag-arrow-prev{
+  transition: color 0.2s;
+  color: #2a2a2a;
+
+  &:hover{
+    color: #969696;
+  }
+}

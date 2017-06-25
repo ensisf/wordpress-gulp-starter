@@ -1,0 +1,124 @@
+%svg-common {
+	background: url("svg/sprite.css-2894b880.svg") no-repeat;
+}
+
+.svg-bilboard {
+	@extend %svg-common;
+	background-position: 99.95348837209302% 0;
+}
+
+.svg-bilboard-dims {
+	width: 364px;
+	height: 364px;
+}
+
+.svg-calc {
+	@extend %svg-common;
+	background-position: 67.17399135446685% 0;
+}
+
+.svg-calc-dims {
+	width: 328.6px;
+	height: 394.5px;
+}
+
+.svg-car {
+	@extend %svg-common;
+	background-position: 57.11332312404288% 58.63555291319858%;
+}
+
+.svg-car-dims {
+	width: 133px;
+	height: 66.2px;
+}
+
+.svg-fb {
+	@extend %svg-common;
+	background-position: 65.11112699206745% 65.88016588016589%;
+}
+
+.svg-fb-dims {
+	width: 39.7px;
+	height: 39.7px;
+}
+
+.svg-gear {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-gear-dims {
+	width: 745.9px;
+	height: 739px;
+}
+
+.svg-insta {
+	@extend %svg-common;
+	background-position: 62.2739941399271% 65.88016588016589%;
+}
+
+.svg-insta-dims {
+	width: 39.7px;
+	height: 39.7px;
+}
+
+.svg-link-arrow {
+	@extend %svg-common;
+	background-position: 53.69663811100713% 71.40421574705518%;
+}
+
+.svg-link-arrow-dims {
+	width: 49.9px;
+	height: 93.8px;
+}
+
+.svg-mail {
+	@extend %svg-common;
+	background-position: 63.33045107364174% 55.90986394557823%;
+}
+
+.svg-mail-dims {
+	width: 51.2px;
+	height: 33.4px;
+}
+
+.svg-marker {
+	@extend %svg-common;
+	background-position: 59.72182798751063% 66.19252873563218%;
+}
+
+.svg-marker-dims {
+	width: 29.8px;
+	height: 43px;
+}
+
+.svg-slider-arrow {
+	@extend %svg-common;
+	background-position: 99.95348837209302% 97.06666666666666%;
+}
+
+.svg-slider-arrow-dims {
+	width: 364px;
+	height: 364px;
+}
+
+.svg-tel {
+	@extend %svg-common;
+	background-position: 57.12029859316681% 66.47907647907648%;
+}
+
+.svg-tel-dims {
+	width: 45.8px;
+	height: 46px;
+}
+
+.svg-underline {
+	@extend %svg-common;
+	background-position: 77.77777777777777% 99.72602739726027%;
+}
+
+.svg-underline-dims {
+	width: 57.5px;
+	height: 9px;
+}
+
