@@ -12,34 +12,34 @@ Author URI: https://github.com/frontensis
 @import 'utils/_mixins'; 
 
 //==========BASE==========//
-// @import 'normalize.css/normalize';
-// // @import 'base/_devs';
-// @import 'base/_base'; 
+@import 'normalize.css/normalize';
+// @import 'base/_devs';
+@import 'base/_base'; 
 
-// //==========COMPONENTS==========//
-// @import 'components/_fonts';
-// @import 'components/_btn';
-// // @import 'components/_sprite';
+//==========COMPONENTS==========//
+@import 'components/_fonts';
+@import 'components/_btn';
+@import 'components/_sprite';
 
-// //==========LAYOUT==========//
-// @import 'layout/_grid';
-// @import 'layout/_header';
-// @import 'layout/_footer';
-// @import 'layout/_social';
-// @import 'layout/_nav';
-// @import 'layout/_sidebar';
-// @import 'layout/_titles';
-// @import 'layout/_forms';
-// @import 'layout/_breadcrumbs';
-// @import 'layout/_pagination';
-// @import 'layout/_sliders';
+//==========LAYOUT==========//
+@import 'layout/_grid';
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_social';
+@import 'layout/_nav';
+@import 'layout/_sidebar';
+@import 'layout/_titles';
+@import 'layout/_forms';
+@import 'layout/_breadcrumbs';
+@import 'layout/_pagination';
+@import 'layout/_sliders';
 
-// //==========PAGES==========//
-// @import 'pages/_index';
-// @import 'pages/_about';
-// @import 'pages/_contacts';
-// @import 'pages/_blog';
-// @import 'pages/_single';
+//==========PAGES==========//
+@import 'pages/_index';
+@import 'pages/_about';
+@import 'pages/_contacts';
+@import 'pages/_blog';
+@import 'pages/_single';
 
 // @import 'magnific-popup/src/css/main.scss';
-@import 'slick-carousel/slick/slick.scss';
+// @import 'slick-carousel/slick/slick.scss';
