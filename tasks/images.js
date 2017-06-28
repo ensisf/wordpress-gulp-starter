@@ -32,8 +32,11 @@ function buildSprite(gulp, plugins) {
         imgName: 'sprite.png', //sprite name
         cssName: '_sprite.scss', //sass file name
         imgPath: 'img/images/sprite.png', //the path where is sprite image after build
-        cssFormat: 'scss', //format
-        padding: 5 // paddings between icons
+        // cssFormat: 'scss', //format
+        padding: 5, // paddings between icons
+        retinaSrcFilter: ['src/design/icones/**/*-2x.png'],
+        retinaImgName: 'sprite-2x.png',
+        retinaImgPath : 'img/images/sprite-2x.png',
       }));
     spriteData.img.pipe(gulp.dest(config.path.src.spriteImg)); // put sprite image
     spriteData.css.pipe(gulp.dest(config.path.src.spriteSass)); // put sprite stylesheet
