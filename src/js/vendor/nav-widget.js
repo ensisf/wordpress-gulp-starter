@@ -29,7 +29,9 @@ function pageWidget(pages) {
             background:#222;
             border-bottom-right-radius:10px;
             transition:all .3s ease;
-            transform:translate(-100%,0)
+            transform:translate(-100%,0);
+            max-height: 100%;
+            overflow: auto;
           }
           .widget_wrap:after{
             content:" ";
