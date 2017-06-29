@@ -31,7 +31,6 @@ function pageWidget(pages) {
             transition:all .3s ease;
             transform:translate(-100%,0);
             max-height: 100%;
-            overflow: auto;
           }
           .widget_wrap:after{
             content:" ";
@@ -44,7 +43,8 @@ function pageWidget(pages) {
             cursor:pointer
           }
           .widget_wrap:hover{
-            transform:translate(0,0)
+            transform:translate(0,0);
+            overflow: auto;
           }
           .widget_item{
             padding:0 0 10px
