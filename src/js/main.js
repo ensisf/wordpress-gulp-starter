@@ -1,16 +1,12 @@
-///////////////////////////////////////////////////VENDORS
-/*
-= vendor/sprite-svg.js
-= vendor/fotorama.js
-= vendor/jquery.magnific-popup.js
-= vendor/jquery.maskedinput.min.js
-= vendor/jquery.pickmeup.min.js
-= vendor/jquery.smoothscroll.js
-= vendor/jquery.sticky.js
-= vendor/slick.min.js
-= vendor/parallax.min.js
-= vendor/wow.min.js
-*/
+import pageWidget from './utils/pages-widget';
+
+pageWidget([
+  'index',
+  'about',
+  'blog',
+  'single',
+  'contacts'
+]);
 
 jQuery(document).ready(function($) {
   //get max height

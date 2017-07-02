@@ -1,5 +1,5 @@
 const plugins = require('gulp-load-plugins')({
-        pattern: ['gulp-*', 'browser-sync', 'gulp.*', '@*/gulp{-,.}*']
+        pattern: ['gulp-*', 'browser-sync', 'gulp.*', '@*/gulp{-,.}*','webpack']
       });
       
 const config = {
@@ -42,3 +42,7 @@ const config = {
 };
 
 module.exports = config;
+
+// By default - dev environment
+// set production - set NODE_ENV=production gulp style:build
+// Return to dev - set NODE_ENV=

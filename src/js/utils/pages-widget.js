@@ -1,10 +1,3 @@
-//source http://glivera-team.github.io/javascript/2016/04/06/js-functions.html
-pageWidget([
-  'index',
-  'about-company',
-  'about-us'
-]);
-
 function pageWidget(pages) {
   let widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
   widgetWrap.prependTo("body");
@@ -59,3 +52,5 @@ function pageWidget(pages) {
           }</style>`);
   widgetStilization.prependTo(".widget_wrap");
 }
+
+export default pageWidget;

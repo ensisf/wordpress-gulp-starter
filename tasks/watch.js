@@ -9,7 +9,7 @@ module.exports = (gulp, plugins) => {
             gulp.start('style:build');
         });
         plugins.watch([config.path.watch.js], function () {
-            gulp.start('js:build');
+            gulp.start('webpack');
         });
         plugins.watch([config.path.watch.img], function () {
             gulp.start('image:build');
