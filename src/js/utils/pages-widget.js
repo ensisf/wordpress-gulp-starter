@@ -3,8 +3,7 @@ function pageWidget(pages) {
   widgetWrap.prependTo("body");
 
   for (let i = 0; i < pages.length; i++) {
-    $(`<li class="widget_item">
-      <a class="widget_link" href="${pages[i]}.html">${pages[i]}</a>
+    $(`<li class="widget_item"><a class="widget_link" href="${pages[i]}.html">${pages[i]}</a>
     </li>`).appendTo('.widget_list');
   }
 
