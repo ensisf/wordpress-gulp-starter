@@ -1,4 +1,5 @@
 import pageWidget from './utils/pages-widget';
+import svgSprite from './vendor/sprite-svg';
 
 pageWidget([
   'index',
@@ -7,6 +8,8 @@ pageWidget([
   'single',
   'contacts'
 ]);
+
+svgSprite();
 
 jQuery(document).ready(function($) {
   //get max height

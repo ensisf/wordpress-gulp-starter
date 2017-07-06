@@ -1,12 +1,10 @@
 // http://osvaldas.info/caching-svg-sprite-in-localstorage
-;
-(function (window, document) {
-    'use strict';
 
+export default function (){
 
     var path = window.path || '', // in header.php
         file = path + '/img/images/sprite_symbol.svg',
-        revision = 234546;
+        revision = 5515;
 
     if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect)
         return true;
@@ -45,5 +43,4 @@
         }
         request.send();
     } catch (e) {}
-
-}(window, document));
+}
