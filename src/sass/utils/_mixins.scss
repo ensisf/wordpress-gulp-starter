@@ -173,13 +173,13 @@ $breakpoints: (
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////MEDIA CUSTOM
-@mixin media-custom($size) {
-	@media screen and (max-width: $size){
+@mixin max($size) {
+	@media (max-width: #{$size}px){
 		@content;
 	}
 }
 @mixin min($size) {
-	@media (min-width: $size){
+	@media (min-width: #{$size}px){
 		@content;
 	}
 }
