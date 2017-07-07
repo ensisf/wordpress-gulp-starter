@@ -13,6 +13,13 @@ const webpackConfig = {
             filename: '[name].min.js?[chunkhash:6]',
             path: path.resolve(__dirname, './js')
         },
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery",
+                'window.jQuery': "jquery"
+            })
+        ],
         module: {
             loaders: [{
                 test: /.js?$/,
