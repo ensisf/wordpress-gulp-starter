@@ -4,24 +4,15 @@ const webpack = require('webpack');
 
 const webpackConfig = {
         entry: {
-            main: './src/js/main.js',
-            vendor: ['jquery']
+            main: './src/js/main.js'
+        },
+        externals: {
+            "jquery": "jQuery"
         },
         output: {
             filename: '[name].min.js?[chunkhash:6]',
             path: path.resolve(__dirname, './js')
         },
-        plugins: [
-            new webpack.ProvidePlugin({
-                $: "jquery",
-                jQuery: "jquery",
-                'window.jQuery': "jquery"
-            }),
-             new webpack.optimize.CommonsChunkPlugin({
-                 name: 'vendor', 
-                 filename: 'jquery.js'
-             })
-        ],
         module: {
             loaders: [{
                 test: /.js?$/,
