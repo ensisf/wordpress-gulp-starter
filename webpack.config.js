@@ -3,15 +3,28 @@ const config = require('./tasks/config');
 const webpack = require('webpack');
 
 const webpackConfig = {
-        entry: './src/js/main.js',
+        entry: {
+            main: './src/js/main.js',
+            vendor: ['jquery']
+        },
         output: {
-            filename: 'main.min.js',
+            filename: '[name].min.js?[chunkhash:6]',
             path: path.resolve(__dirname, './js')
         },
-        plugins: [],
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery",
+                'window.jQuery': "jquery"
+            }),
+             new webpack.optimize.CommonsChunkPlugin({
+                 name: 'vendor', 
+                 filename: 'jquery.js'
+             })
+        ],
         module: {
             loaders: [{
-                test: /.jsx?$/,
+                test: /.js?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 query: {
