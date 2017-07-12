@@ -19,14 +19,16 @@ const config = {
       fonts: 'src/fonts/**/*.*',
       spriteImg: 'src/img/images/',
       spriteSass: 'src/sass/components/',
-      spriteIcons: 'src/design/icones/**/*.png'
+      spriteIcons: 'src/design/icons/**/*.png'
     },
     watch: {
       html: 'src/**/*.html',
       js: 'src/js/**/*.js',
       style: 'src/sass/**/*.scss',
       img: 'src/img/**/*.*',
-      fonts: 'src/fonts/**/*.*'
+      fonts: 'src/fonts/**/*.*',
+      sprite: 'src/design/icons/**/*.svg',
+      svgSprite: 'src/design/svg/icons/**/*.svg'
     }
   },
   isDev: !process.env.NODE_ENV || process.env.NODE_ENV === 'production',
