@@ -27,7 +27,7 @@ const config = {
       style: 'src/sass/**/*.scss',
       img: 'src/img/**/*.*',
       fonts: 'src/fonts/**/*.*',
-      sprite: 'src/design/icons/**/*.svg',
+      sprite: 'src/design/icons/**/*.png',
       svgSprite: 'src/design/svg/icons/**/*.svg'
     }
   },
