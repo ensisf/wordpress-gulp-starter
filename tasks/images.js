@@ -34,7 +34,7 @@ function buildSprite(gulp, plugins) {
         imgPath: 'img/images/sprite.png', //the path where is sprite image after build
         // cssFormat: 'scss', //format
         padding: 5, // paddings between icons
-        retinaSrcFilter: ['src/design/icones/**/*-2x.png'],
+        retinaSrcFilter: ['src/design/icons/**/*-2x.png'],
         retinaImgName: 'sprite-2x.png',
         retinaImgPath : 'img/images/sprite-2x.png',
       }));
