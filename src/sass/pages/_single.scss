@@ -4,18 +4,19 @@
 
 .entry__content{
   @include cf;
-  padding: 0 10px;
 }
 
 .entry__figure{
-  @include min(992px){
+  margin: 0 0 30px;
+
+  @include min(992){
     float: left;
-    max-width: 470px;
-    margin: 0 47px 20px 0;
+    max-width: 500px; 
+    margin-right: 30px;
   }
 }
 
-.entry__image{
+.entry__img{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -37,7 +38,3 @@
 
 }
 
-.figure-content {
-    width: 100%;
-    vertical-align: bottom;
-}
