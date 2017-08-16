@@ -190,6 +190,12 @@ $breakpoints: (
 	}
 }
 
+@mixin absolute($top:auto, $right:auto, $bottom:auto, $left:auto){
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
 
 @mixin underline {
   position: relative;
