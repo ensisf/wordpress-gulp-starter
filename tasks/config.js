@@ -5,9 +5,9 @@ const plugins = require('gulp-load-plugins')({
 const config = {
   path: {
     build: {
-      html: '',
+      html: 'build/',
       js: 'js/',
-      css: '',
+      css: 'css/',
       img: 'img/',
       fonts: 'fonts/'
     },
@@ -17,9 +17,7 @@ const config = {
       style: 'src/sass/style.scss',
       img: 'src/img/**/*.*',
       fonts: 'src/fonts/**/*.*',
-      spriteImg: 'src/img/images/',
-      spriteSass: 'src/sass/components/',
-      spriteIcons: 'src/design/icons/**/*.png'
+      spriteIcons: 'src/icons/'
     },
     watch: {
       html: 'src/**/*.html',
@@ -27,9 +25,9 @@ const config = {
       style: 'src/sass/**/*.scss',
       img: 'src/img/**/*.*',
       fonts: 'src/fonts/**/*.*',
-      sprite: 'src/design/icons/**/*.png',
-      svgSprite: 'src/design/svg/icons/**/*.svg'
-    }
+      sprite: 'src/icons/'
+    },
+    serverDir: ['./', './build/']
   },
   isDev: !process.env.NODE_ENV || process.env.NODE_ENV === 'production',
   onError: function (err) {

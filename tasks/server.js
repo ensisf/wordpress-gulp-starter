@@ -4,7 +4,7 @@ module.exports = (plugins) => {
     return () => {
         plugins.browserSync({
             server: {
-                baseDir: "./"
+                baseDir: config.path.serverDir
             },
             tunnel: false,
             host: 'localhost',

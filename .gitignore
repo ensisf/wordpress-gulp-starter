@@ -1,10 +1,7 @@
 /node_modules
 /maps
-/*.html
-/*.css
+/css
 /fonts
 /img
 /js
-*.psd
-*.rar
-*.zip
+/build

@@ -17,10 +17,10 @@ module.exports = (gulp, plugins) => {
         plugins.watch([config.path.watch.fonts], function () {
             gulp.start('fonts:build');
         });
-        plugins.watch([config.path.watch.svgSprite], function () {
+        plugins.watch([`${config.path.src.spriteIcons}/*.svg`], function () {
             gulp.start('svg-sprite:build');
         });
-        plugins.watch([config.path.watch.sprite], function () {
+        plugins.watch([`${config.path.src.spriteIcons}/*.png`], function () {
             gulp.start('sprite:build');
         });
     }

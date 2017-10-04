@@ -24,28 +24,28 @@ function buildImages(gulp, plugins) {
 
 function buildSprite(gulp, plugins) {
   return () => {
-    const spriteData = gulp.src(config.path.src.spriteIcons)
+    const spriteData = gulp.src(`${config.path.src.spriteIcons}/*.png`)
       .pipe(plugins.plumber({
         errorHandler: config.onError
       }))
       .pipe(plugins.spritesmith({
         imgName: 'sprite.png', //sprite name
         cssName: '_sprite.scss', //sass file name
-        imgPath: 'img/images/sprite.png', //the path where is sprite image after build
+        imgPath: config.spriteLink, //the path to sprite image
         // cssFormat: 'scss', //format
         padding: 5, // paddings between icons
-        retinaSrcFilter: ['src/design/icons/**/*-2x.png'],
-        retinaImgName: 'sprite-2x.png',
-        retinaImgPath : 'img/images/sprite-2x.png',
-      }));
-    spriteData.img.pipe(gulp.dest(config.path.src.spriteImg)); // put sprite image
-    spriteData.css.pipe(gulp.dest(config.path.src.spriteSass)); // put sprite stylesheet
+        // retinaSrcFilter: ['src/design/icons/**/*-2x.png'],
+        // retinaImgName: 'sprite-2x.png',
+        // retinaImgPath : 'img/images/sprite-2x.png',
+      })); 
+    spriteData.img.pipe(gulp.dest(config.path.build.spriteImg)); // put sprite image
+    spriteData.css.pipe(gulp.dest(config.path.build.spriteSass)); // put sprite stylesheet
   }
 }
 
 function buildSpriteSvg(gulp, plugins) {
   return () => {
-    gulp.src('src/design/svg/icons/*.svg')
+    gulp.src(`${config.path.src.spriteIcons}/*.svg`)
       .pipe(plugins.plumber({
         errorHandler: config.onError
       }))
@@ -54,13 +54,13 @@ function buildSpriteSvg(gulp, plugins) {
           pretty: true
         }
       })) //minify svg
-      // .pipe(plugins.cheerio({
-      // 	run: function ($) { // replace some attributes
-      // 		$('[fill]').removeAttr('fill');
-      // 		$('[style]').removeAttr('style');
-      // 	},
-      // 	parserOptions: { xmlMode: true }
-      // }))
+      .pipe(plugins.cheerio({
+      	run: function ($) { // replace some attributes
+      		$('[fill]').removeAttr('fill');
+      		$('[style]').removeAttr('style');
+      	},
+      	parserOptions: { xmlMode: true }
+      }))
       .pipe(plugins.replace('&gt;', '>')) //replace '&gt;'
       .pipe(plugins.svgSprite({
         mode: {
@@ -78,7 +78,7 @@ function buildSpriteSvg(gulp, plugins) {
       .pipe(plugins.cheerio(function ($) {
         $('svg').attr('style', 'display:none');
       }))
-      .pipe(gulp.dest('src/img/images/'));
+      .pipe(gulp.dest(config.path.build.spriteImg));
   }
 }
 

@@ -16,7 +16,8 @@ module.exports = (gulp, plugins) => {
             .pipe(plugins.if(!config.isDev, plugins.csso({
                 comments: false
             })))
-            .pipe(plugins.if(config.isDev, plugins.sourcemaps.write('maps/')))
+            .pipe(plugins.rename({suffix: ".min"}))
+            .pipe(plugins.if(config.isDev, plugins.sourcemaps.write('../maps/')))
             .pipe(gulp.dest(config.path.build.css))
             .pipe(plugins.browserSync.reload({
                 stream: true
