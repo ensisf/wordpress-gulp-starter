@@ -9,7 +9,9 @@ const config = {
       js: 'js/',
       css: 'css/',
       img: 'img/',
-      fonts: 'fonts/'
+      fonts: 'fonts/',
+      spriteImg : 'src/img/images/',
+      spriteSass : 'src/sass/components/'
     },
     src: {
       html: 'src/*.html',
