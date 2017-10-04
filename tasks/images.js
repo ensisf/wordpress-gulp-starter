@@ -31,12 +31,12 @@ function buildSprite(gulp, plugins) {
       .pipe(plugins.spritesmith({
         imgName: 'sprite.png', //sprite name
         cssName: '_sprite.scss', //sass file name
-        imgPath: config.spriteLink, //the path to sprite image
+        imgPath: `../img/images/sprite.png`, //the path to sprite image
         // cssFormat: 'scss', //format
         padding: 5, // paddings between icons
-        // retinaSrcFilter: ['src/design/icons/**/*-2x.png'],
+        // retinaSrcFilter: [`${config.path.src.spriteIcons}/**/*-2x.png`],
         // retinaImgName: 'sprite-2x.png',
-        // retinaImgPath : 'img/images/sprite-2x.png',
+        // retinaImgPath : `../img//images/sprite-2x.png`,
       })); 
     spriteData.img.pipe(gulp.dest(config.path.build.spriteImg)); // put sprite image
     spriteData.css.pipe(gulp.dest(config.path.build.spriteSass)); // put sprite stylesheet
