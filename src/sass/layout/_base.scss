@@ -14,14 +14,11 @@ html {
 body {
   height: 100%;
   margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;  
   min-width: 320px;
-
   background-color: #fff;
   @include font_smoothing;
-}
-
-.main {
-  flex: 1;
 }
 
 
