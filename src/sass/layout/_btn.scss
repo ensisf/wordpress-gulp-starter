@@ -1,0 +1,172 @@
+.btn{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  user-select: none;
+  touch-action: manipulation;
+  text-align: center;
+  text-transform: uppercase;
+  background-image: none;
+  white-space: nowrap;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+  border: none;
+  line-height: 1;
+
+  @include focusBtn(#000);
+  &:focus {
+    outline: none;
+  }
+  &--primary {
+    background-color: $primary;
+    color: #fff;
+    border-color: $primary;
+    @include focusBtn($primary);
+    @include hoverBtn($primary-hover);
+  }
+  &--secondary {
+    background-color: $secondary;
+    color: #fff;
+    border-color: $secondary;
+    @include focusBtn($secondary);
+    @include hoverBtn($secondary-hover);
+  }
+  &--success {
+    background-color: $success;
+    color: #fff;
+    border-color: $success;
+    @include focusBtn($success);
+    @include hoverBtn($success-hover);
+  }
+  &--warning {
+    background-color: $warning;
+    color: #fff;
+    border-color: $warning;
+    @include focusBtn($warning);
+    @include hoverBtn($warning-hover);
+  }
+  &--error {
+    background-color: $error;
+    color: #fff;
+    border-color: $error;
+    @include focusBtn($error);
+    @include hoverBtn($error-hover);
+  } //////////////////////////////////////////////////       OUTLINE
+  &--outline {
+    color: #949697;
+    border-color: currentColor;
+    @include focusBtn(#949697);
+    &:hover {
+      color: $primary;
+    }
+  }
+  &--outline-primary {
+    color: $primary;
+    border-color: $primary;
+    @include focusBtn($primary);
+    @include hoverBtn($primary-hover);
+  }
+  &--outline-secondary {
+    color: $secondary;
+    border-color: $secondary;
+    @include focusBtn($secondary);
+    @include hoverBtn($secondary-hover);
+  }
+  &--outline-success {
+    background-color: #fdfdfe;
+    color: $success;
+    border-color: $success;
+    @include focusBtn($success);
+  }
+  &--outline-warning {
+    background-color: #fdfdfe;
+    color: $warning;
+    border-color: $warning;
+    @include focusBtn($warning);
+  }
+  &--outline-error {
+    background-color: #fdfdfe;
+    color: $error;
+    border-color: $error;
+    @include focusBtn($error);
+  } 
+  &--round{
+    border-radius: 56px;
+  }
+  //////////////////////////////////////////////////       SIZE
+  &--lg {
+    padding: 16px 25px;
+    text-transform: uppercase;
+  }
+  &--sm {
+    padding: 7px 30px;
+    border-radius: rem(4);
+  }
+  &--full {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  } 
+
+  &--menu{
+    $btn-height: 28;
+    $btn-width: 38;
+    $l-height: 4;
+    @include size(em($btn-width), em($btn-height));
+    font-size: 17px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+    .lines{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: em($l-height);
+      top: em($btn-height/2 - $l-height/2);
+      background: currentColor;
+      transition: all 0.3s;
+    }
+    &::after,
+    &::before{
+      position: absolute;
+      left: 0;
+      content: '';
+      background-color: currentColor;
+      height: em($l-height);
+      width: 100%;
+      transform-origin: 50% 50%;
+      transform: translate(0,0);
+      transition: all 0.3s;
+    }
+    &::after{
+      bottom: 0;
+    }
+    &::before{
+      top: 0;
+    }
+
+    &:hover{
+      &::after{
+        transform: translateY(-2px);
+      }
+      &::before{
+        transform: translateY(2px);
+      }
+    }
+
+    &.opened{
+      .lines{
+        transform: scale(0);
+      }
+      &::after{
+
+        transform: translateY(em(-($btn-height/2 - $l-height/2))) rotate(45deg);
+      }
+      &::before{
+        transform: translateY(em($btn-height/2 - $l-height/2)) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -17,15 +17,17 @@
   }
 }
 
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,500,700&subset=cyrillic');
+
 //Roboto
   // Light
-@include font('Roboto', Roboto, RobotoLight, 300);
-  // Regular
-@include font('Roboto', Roboto, RobotoRegular, 400);
-  // Bold
-@include font('Roboto', Roboto, RobotoBold, 900);
-  // Medium
-@include font('Roboto', Roboto, RobotoMedium, 500);
+// @include font('Roboto', Roboto, RobotoLight, 300);
+//   // Regular
+// @include font('Roboto', Roboto, RobotoRegular, 400);
+//   // Bold
+// @include font('Roboto', Roboto, RobotoBold, 900);
+//   // Medium
+// @include font('Roboto', Roboto, RobotoMedium, 500);
 
 
 // {

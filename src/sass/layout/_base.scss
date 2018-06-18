@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: $root-font-size + px;
+  line-height: 1;
+  color: $font-color;
+  font-family: $font-family;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+
+  font-weight: normal;
+  min-width: 320px;
+
+  background-color: #fff;
+  @include font_smoothing;
+}
+
+.main {
+  flex: 1;
+}
+
+
+///////////////////////////Wordpress

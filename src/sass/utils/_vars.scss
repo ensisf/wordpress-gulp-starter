@@ -1,22 +1,33 @@
 //==========COLORS==========//
-$background-main: #fff;
-
-$theme-color: #024c79;
-
-$facebook: #3B5998;
-$google-plus: #DD4B39;
-$linkedin: #007AB9;
-$twitter: #007AB9;
-
-$accent: #ffbe00;
-
-$error: red;
-$error-light:#ffecec;
-
+$primary: #2193d5;
+$primary-hover: darken(#1d79af, 5%);
+$secondary: #ff6e00;
+$secondary-hover: darken(#ff6e00, 5%);
+$success: #12bc70;
+$success-hover: darken(#12bc70, 5%);
+$warning: #ff7200;
+$warning-hover: darken(#ff7200, 5%);
+$error: #f41019;
+$error-hover: darken(#f41019, 5%);
+$font-color: #2f2f2f;
+$border-color: #e3e3e3;
 
 //==========FONT==========//
-$sans-serif: 'Roboto', sans-serif;
-$sans-serif2: 'Roboto Condensed', sans-serif;
-$root-font-size: 15;
-$font-color: #1d1d1d;
-$font-family: 'Roboto', 'Helvetica', 'Calibri', sans-serif;
+$font: 'Roboto';
+$sans: $font, sans-serif;
+$root-font-size: 16;
+$font-family: #{$sans}, Helvetica, Helvetica Neue, Arial, Calibri, sans-serif;
+
+//shadows
+$shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+
+//borders
+$border: 1px solid $border-color;
+$border-bold: 2px solid $border-color;
+
+$breakpoints: ( 
+  xs: 576, 
+  sm: 768, 
+  md: 992, 
+  lg: 1200
+  );

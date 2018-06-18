@@ -6,14 +6,6 @@ function buildImages(gulp, plugins) {
       .pipe(plugins.plumber({
         errorHandler: config.onError
       }))
-      .pipe(plugins.if(!config.isDev, plugins.imagemin({
-        // progressive: true,
-        // svgoPlugins: [{
-        //   removeViewBox: false
-        // }],
-        // use: [pngquant()],
-        // interlaced: true
-      })))
       .pipe(gulp.dest(config.path.build.img))
       .pipe(plugins.browserSync.reload({
         stream: true

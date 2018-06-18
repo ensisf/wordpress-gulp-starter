@@ -1,22 +1,39 @@
-$gutter: 20px;
-
-.container{
-  display: flex;
-  flex-wrap: wrap;
+$gutter: 30;
+$container-width: 1190;
+.container {
   margin: 0 auto;
   max-width: 100%;
-  width: 1200px + $gutter;
-  padding-left: $gutter/2;
-  padding-right: $gutter/2;
+  width: $container-width + $gutter + px;
+  padding-left: $gutter/2 + px;
+  padding-right: $gutter/2 + px;
 }
-.row{
+
+.row {
   position: relative;
-  margin-left: $gutter/-2;
-  margin-right: $gutter/-2;
+  margin-left: $gutter/-2 + px;
+  margin-right: $gutter/-2 + px;
+  flex-wrap: wrap;
+  @include min('xs') {
+    display: flex;
+  }
 }
-.col{
-  display: flex;
-  flex-direction: column;
-  padding-left: $gutter/2;
-  padding-right: $gutter/2;
+
+.col {
+  padding-left: $gutter/2 + px;
+  padding-right: $gutter/2 + px;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@each $key,
+$val in $breakpoints {
+  @include min($val) {
+    @for $i from 1 through 12 {
+      .col-#{$key}-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+  }
 }

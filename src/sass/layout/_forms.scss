@@ -13,14 +13,9 @@ input,
 select,
 button,
 textarea {
-    // border: none;
     background: none;
     font: inherit;
     color: inherit;
-
-    &:focus{
-      outline-color: $theme-color;
-    }
 }
 
 label {
@@ -59,28 +54,3 @@ label {
   }
 }
 
-/////////////////////////////////////////cf7
-.wpcf7-not-valid{// not valid field
-  background-color: $error-light;
-}
-.wpcf7-not-valid-tip{ // not valid tip
-  display: block;
-  margin-bottom: 10px;
-  color: $error;
-}
-.wpcf7-form .ajax-loader { // load icon
-  background-image: url(img/images/ripple.svg)!important;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 42px!important;
-  height: 42px!important;
-  margin-right: auto !important;
-}
-
-.wpcf7-response-output{
-  margin-top: 10px;
-}
-
-.wpcf7-form-control-wrap{
-  width: 100%;
-}

@@ -11,21 +11,19 @@ Author URI: https://github.com/frontensis
 @import 'utils/_vars'; 
 @import 'utils/_mixins'; 
 
-//==========BASE==========//
 @import 'normalize.css/normalize';
-// @import 'base/_devs';
-@import 'base/_base'; 
+// assets
+@import 'assets/_fonts';
+@import 'utils/_utils';
 
-//==========COMPONENTS==========//
-@import 'components/_fonts';
-@import 'components/_btn';
-@import 'components/_sprite';
+
 
 //==========LAYOUT==========//
+@import 'layout/_base'; 
 @import 'layout/_grid';
+@import 'layout/_btn';
 @import 'layout/_header';
 @import 'layout/_footer';
-@import 'layout/_social';
 @import 'layout/_nav';
 @import 'layout/_sidebar';
 @import 'layout/_titles';
@@ -33,7 +31,6 @@ Author URI: https://github.com/frontensis
 @import 'layout/_breadcrumbs';
 @import 'layout/_pagination';
 @import 'layout/_sliders';
-@import 'layout/_modals';
 
 //==========PAGES==========//
 @import 'pages/_index';
@@ -42,5 +39,9 @@ Author URI: https://github.com/frontensis
 @import 'pages/_blog';
 @import 'pages/_single';
 
+
+@import 'layout/_WP';
+@import 'layout/_modals';
+// @import 'magnific-popup/src/css/main.scss';
 // @import 'magnific-popup/src/css/main.scss';
 // @import 'slick-carousel/slick/slick.scss';

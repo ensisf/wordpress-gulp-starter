@@ -1,0 +1,211 @@
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-success {
+  color: $success;
+}
+
+.text-warning {
+  color: $warning;
+}
+
+.text-error {
+  color: $error;
+}
+
+.bolder {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex{
+  display: inline-flex;
+}
+
+.flex-row-reverse{
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.flex-center {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-center;
+}
+
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+.hidden {
+  display: none;
+}
+
+.visuallyHidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+}
+
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.svg-icon {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+}
+
+.cf {
+  &::after,
+  &::before {
+    content: '';
+    display: table;
+    width: 100%;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+.cover-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.center-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-evt{
+  * {
+    pointer-events: none;
+  }
+}
+
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////

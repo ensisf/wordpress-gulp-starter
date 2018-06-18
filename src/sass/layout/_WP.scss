@@ -1,0 +1,54 @@
+
+.alignright {
+  display: block;
+	margin-left: auto;
+	margin-right: auto;
+  
+  @include min(800px){
+    float: right;
+    margin: 0 0 30px 30px;
+  }
+}
+.alignleft {
+  display: block;
+	margin-left: auto;
+	margin-right: auto;
+  
+  @include min(800px){
+    float: left;
+    margin: 0 30px 30px 0;
+  }
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/////////////////////////////////////////cf7
+.wpcf7-not-valid{// not valid field
+  background-color: $error;
+}
+.wpcf7-not-valid-tip{ // not valid tip
+  display: block;
+  margin-bottom: 10px;
+  color: $error;
+}
+.wpcf7-form .ajax-loader { // load icon
+  background-image: url(img/images/ripple.svg)!important;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 42px!important;
+  height: 42px!important;
+  margin-right: auto !important;
+}
+
+.wpcf7-response-output{
+  margin-top: 10px;
+}
+
+.wpcf7-form-control-wrap{
+  width: 100%;
+}
